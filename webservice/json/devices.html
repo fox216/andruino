@@ -1,0 +1,36 @@
+$def with (title, devices)
+<html>
+<head>
+<title>$title</title>
+<style type="text/css"> 
+<!--
+table { }
+table.devices th,td { border-style:solid; }
+-->
+</style> 
+</head>
+<body>
+<table class="devices">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Port</th>
+<th>Type</th>
+<th>Added</th>
+<th>Last Updated</th>
+<th>Enabled</th>
+</tr>
+$for device in devices:
+	<tr>
+	<td><a href="/adddetails?device_id=$device.id">$device.id</a></td>
+	<td><a href="/devdetails?device_id=$device.id">$device.name</a></td>
+	<td>$device.port</td>
+	<td>$device.type</td>
+	<td>$device.ts_added</td>
+	<td>$device.ts_updated</td>
+	<td>$device.enabled</td>
+	</tr>
+</table>
+<a href="/adddevice">Add Device</a>
+</body>
+</html>

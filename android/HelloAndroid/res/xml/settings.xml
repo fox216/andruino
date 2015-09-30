@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:orderingFromXml="true" android:title="Server Settings">
+        <EditTextPreference android:key="servername" android:title="Server Name" android:summary="Enter a friendly name for your server." android:defaultValue="HRC51"></EditTextPreference>
+        <EditTextPreference android:key="serverurl" android:title="Server URL" android:defaultValue="csu.hrc51.com" android:summary="Enter the FQDN of your server."></EditTextPreference>
+        <EditTextPreference android:key="serverport" android:title="Server Port" android:defaultValue="8080" android:summary="Enter the port on which your server runs."></EditTextPreference>
+        <CheckBoxPreference android:key="usessl" android:title="Use HTTPS" android:summary="Does your server use SSL?"></CheckBoxPreference>
+        <EditTextPreference android:key="username" android:title="User Name" android:defaultValue="matt" android:summary="Enter your username."></EditTextPreference>
+        <EditTextPreference android:key="password" android:title="Password" android:defaultValue="password" android:shouldDisableView="true" android:summary="Enter your password."></EditTextPreference>
+    </PreferenceCategory>
+</PreferenceScreen>

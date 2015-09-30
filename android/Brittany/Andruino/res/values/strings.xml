@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Andruino</string>
+    <string name="no_indicators">No indicators to display</string>
+    <string name="no_outputs">No outputs to display</string>
+</resources>

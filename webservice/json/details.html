@@ -1,0 +1,32 @@
+$def with (title, details)
+<html>
+<head>
+<title>$title</title>
+</head>
+<style type="text/css"> 
+<!--
+table { }
+table.details th,td { border-style:solid; }
+-->
+</style> 
+<body>
+<table class="details">
+<tr><th><label for="label">Label</label></th>
+<th><label for="ddr">DDR</label></th>
+<th><label for="pin">Pin</label></th>
+<th><label for="value">Value Received</label></th>
+<th><label for="ts_value">Time Received</label></th>
+<th><label for="last_value">Value Sent</label></th>
+<th><label for="ts_output">Time Sent</label></th>
+<th><label for="enabled">Enabled</label></th></tr>
+$for detail in details:
+	<tr><td>$detail.label</td>
+	<td>$detail.ddr</td>
+	<td>$detail.pin</td>
+	<td>$detail.value</td>
+	<td>$detail.ts_value</td>
+	<td>$detail.last_value</td>
+	<td>$detail.ts_output</td>
+	<td>$detail.enabled</td></tr>
+</table>
+</form>

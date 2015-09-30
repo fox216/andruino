@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Edit pin name" android:id="@+id/edit_name"></item>
+    <item android:title="Disable/Enable pin" android:id="@+id/disable_enable"></item>
+</menu>

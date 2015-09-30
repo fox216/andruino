@@ -1,0 +1,35 @@
+$def with (title, statuses)
+<html>
+<head>
+<title>$title</title>
+</head>
+<style type="text/css"> 
+<!--
+table { }
+table.statuses th,td { border-style:solid; }
+-->
+</style> 
+<body>
+<table class="statuses">
+<tr>
+<th>Device ID</th>
+<th>Detail ID</th>
+<th>Label</th>
+<th>DDR</th>
+<th>Pin</th>
+<th>Value</th>
+<th>Updated</th>
+</tr>
+$for status in statuses:
+	<tr>
+	<td>$status.did</td>
+	<td>$status.id</td>
+	<td>$status.label</td>
+	<td>$status.ddr</td>
+	<td>$status.pin</td>
+	<td>$status.value</td>
+	<td>$status.ts_value</td>
+	</tr>
+</table>
+</body>
+</html>

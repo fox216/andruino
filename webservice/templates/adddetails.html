@@ -1,0 +1,43 @@
+$def with(form,devices,details)
+<h1>Current Device</h1>
+$for device in devices:
+	<table>
+	<tr><th></th><td><input type="hidden" id="device_id" name="device_id" value="$device.id"/></td></tr>
+	<tr><th><label for="id">ID</label></th><td>$device.id</td></tr>
+	<tr><th><label for="name">Name</label></th><td>$device.name</td></tr>
+	<tr><th><label for="port">Port</label></th><td>$device.port</td></tr>
+	<tr><th><label for="type">Type</label></th><td>$device.type</td></tr>
+	<tr><th><label for="enabled">Enabled</label></th><td>$device.enabled</td></tr>
+	</table>
+<h2>Device Details</h2>
+<form method="POST">
+<table>
+<tr><th><label for="label">Label</label></th>
+<th><label for="ddr">DDR</label></th>
+<th><label for="pin">Pin Number</label></th>
+<th><label for="value">Last Time Received</label></th>
+<th><label for="ts_value">Last Value Received</label></th>
+<th><label for="last_value">Last Value Sent</label></th>
+<th><label for="ts_output">Last Time Sent</label></th>
+<th><label for="enabled">Enabled</label></th></tr>
+$for detail in details:
+	<tr><td>$detail.label</td>
+	<td>$detail.ddr</td>
+	<td>$detail.pin</td>
+	<td>$detail.value</td>
+	<td>$detail.ts_value</td>
+	<td>$detail.last_value</td>
+	<td>$detail.ts_output</td>
+	<td>$detail.enabled</td></tr>
+<tr><td><input type="text" id="label" name="label"/></td>
+<td><input type="text" id="ddr" name="ddr"/></td>
+<td><input type="text" id="pin" name="pin"/></td>
+<td><input type="text" id="value" name="value"/></td>
+<td><input type="text" id="ts_value" name="ts_value"/></td>
+<td><input type="text" id="last_value" name="last_value"/></td>
+<td><input type="text" id="ts_output" name="ts_output"/></td>
+<td><select id="enabled" name="enabled"> <option value="0">Disabled</option> <option value="1">Enabled</option> </select> </td>
+<td><button type="submit" id="submit" name="submit">Add</button></td></tr>
+</table>
+</form>
+$#:form.render()

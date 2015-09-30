@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Login" android:id="@+id/login" android:icon="@drawable/ic_menu_login"></item>
+    <item android:title="Settings" android:id="@+id/settings" android:icon="@drawable/ic_menu_preferences"></item>
+    <item android:title="Refresh" android:id="@+id/refresh" android:icon="@drawable/ic_menu_refresh"></item>
+    <item android:title="About" android:id="@+id/about" android:icon="@drawable/ic_menu_info_details"></item>
+    <item android:title="Help" android:id="@+id/help" android:icon="@drawable/ic_menu_help"></item>
+</menu>

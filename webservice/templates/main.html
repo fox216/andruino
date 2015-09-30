@@ -1,0 +1,25 @@
+$def with (username,email)
+<html>
+ <head>
+  <title>Andruino Web Service Usage</title>
+  <style type="text/css"> 
+   <!--
+    table { }
+    table.main th,td { border-style:solid;text-align:left; }
+   -->
+  </style> 
+ </head>
+ <body>
+  <table class="main">
+   <tr><th>Username</th><td>$username</td></tr>
+   <tr><th>Email</th><td>$email</td><td></tr>
+   <tr><th>Action</th><td><a href="/logout">Logout</a></td></tr>
+  </table>
+  <ul>
+   <li><a href="/config">Configure Devices</a></li>
+   <li><a href="/read">Read Status</a></li>
+   <li><a href="/write?did=3&value=0">Turn off Pin 9 on Device 2</a></li>
+   <li><a href="/sqlts">Server Timestamp</a></li>
+  </ul>
+ </body>
+</html>
